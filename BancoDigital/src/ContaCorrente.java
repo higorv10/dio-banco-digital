@@ -12,8 +12,6 @@ public class ContaCorrente extends Conta implements ContaCorrenteInterface {
         if (this.getSaldo() + this.limite >= valor) {
             this.sacar(valor);
             System.out.println("Saque com limite realizado com sucesso.");
-        } else {
-            System.out.println("Saldo insuficiente para sacar com limite.");
         }
     }
 }
