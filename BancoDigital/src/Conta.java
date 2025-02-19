@@ -25,20 +25,14 @@ public abstract class Conta implements ContaInterface {
 
     @Override
     public void sacar(double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-        } else {
-            System.out.println("Saldo insuficiente.");
-        }
+        this.saldo -= valor;
+
     }
 
     @Override
     public void transferir(ContaInterface destino, double valor) {
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            destino.depositar(valor);
-        } else {
-            System.out.println("Saldo insuficiente.");
-        }
+        this.saldo -= valor;
+        destino.depositar(valor);
     }
+
 }

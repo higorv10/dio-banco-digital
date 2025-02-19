@@ -9,4 +9,10 @@ public interface BancoInterface {
     List<ContaInterface> getContas();
 
     void fecharConta(ContaInterface conta);
+
+    void adicionarCliente(ClienteInterface clientes);
+
+    void removerCliente(ClienteInterface clientes);
+
+    List<ClienteInterface> getClientes();
 }

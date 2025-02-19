@@ -1,4 +1,4 @@
 
-public interface ContaPoupancaInterface {
+public interface ContaPoupancaInterface extends ContaInterface {
     void calcularJuros();
 }

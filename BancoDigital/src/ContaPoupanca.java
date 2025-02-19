@@ -8,10 +8,9 @@ public class ContaPoupanca extends Conta implements ContaPoupancaInterface {
 
     @Override
     public void calcularJuros() {
-        this.depositar(this.getSaldo() * this.juros);
         if (this.getSaldo() < 0) {
-            System.out.println("Não é possível calcular juros em contas com saldo negativo.");
-            return;
-        }
+            throw new IllegalArgumentException("Saldo da conta é inválido para calcular juros.");
+        } else
+            this.depositar(this.getSaldo() * this.juros);
     }
 }

@@ -2,30 +2,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco implements BancoInterface {
-    private List<ContaInterface> contas;
+    private List<ContaInterface> conta;
+    private List<ClienteInterface> cliente;
 
     public Banco() {
-        this.contas = new ArrayList<>();
+        this.conta = new ArrayList<>();
+        this.cliente = new ArrayList<>();
+    }
+
+    @Override
+    public void adicionarCliente(ClienteInterface cliente) {
+        this.cliente.add(cliente);
+    }
+
+    @Override
+    public void removerCliente(ClienteInterface cliente) {
+        this.cliente.remove(cliente);
+    }
+
+    @Override
+    public List<ClienteInterface> getClientes() {
+        return this.cliente;
     }
 
     @Override
     public void criarConta(ContaInterface conta) {
-        this.contas.add(conta);
+        this.conta.add(conta);
     }
 
     @Override
     public void fecharConta(ContaInterface conta) {
-        if (conta != null && conta.getSaldo() == 0) {
-            this.contas.remove(conta);
-            System.out.println("Conta fechada com sucesso.");
-        } else {
-            System.out.println("Não é possível fechar a conta com saldo pendente.");
-        }
+        this.conta.remove(conta);
     }
 
     @Override
     public ContaInterface getConta(int numero) {
-        for (ContaInterface conta : this.contas) {
+        for (ContaInterface conta : this.conta) {
             if (conta.getNumero() == numero) {
                 return conta;
             }
@@ -35,6 +47,6 @@ public class Banco implements BancoInterface {
 
     @Override
     public List<ContaInterface> getContas() {
-        return this.contas;
+        return this.conta;
     }
 }
