@@ -84,7 +84,7 @@ src/
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/dio-banco-digital.git
+git clone https://github.com/higorv10/dio-banco-digital.git
 ```
 
 2. Acesse a pasta do projeto:
