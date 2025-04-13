@@ -85,12 +85,13 @@ src/
 
 ```bash
 git clone https://github.com/higorv10/dio-banco-digital.git
+cd dio-banco-digital
 ```
 
-2. Acesse a pasta do projeto:
+2. Após clonar o repositório, localize o arquivo `Main.java` no seu diretório local:
 
-```bash
-cd dio-banco-digital/BancoDigital/src
+```css
+[CAMINHO_DO_REPOSITÓRIO]\BancoDigital\src\Main.java
 ```
 
 3. Se estiver usando o terminal (Prompt de Comando ou Bash):
