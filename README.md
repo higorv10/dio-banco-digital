@@ -101,7 +101,7 @@ cd dio-banco-digital/BancoDigital/src
 javac *.java
 ```
 
-3. Execute o programa:
+- Execute o programa:
 
 ```bash
 java Main
