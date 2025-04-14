@@ -129,4 +129,4 @@ Saldo após saque com limite na Conta Corrente: 900.0
 ```
 
 ## 📄 Licença
-Projeto desenvolvido para fins educacionais na DIO. Sem licença comercial.
+Desenvolvido durante o Bootcamp Bradesco Java Cloud Native na DIO para fins educacionais.
